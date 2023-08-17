@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Line Chart</title>
+</head>
+<body>
+<canvas id="myChart"></canvas>
+<canvas id="chart2"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'August', 'November', 'December'],
+      datasets: [{
+        data: [76, 34, 76, 12, 53, 98, 12, 45 ,23 ,65, 19, 3],
+        label:'Candy',
+        borderColor: 'rgba(120,120,255,1)'
+      },
+        {
+          data: [126, 4, 7, 112, 29, 293, 67, 20, 58, 29, 12, 98],
+          label:'Clothing',
+          borderColor: 'rgb(221,120,255)'
+        },
+        {
+          data: [0, 3.23, 29, 231, 102, 439, 10, 238, 29, 54, 76, 12],
+          label:'Amazon',
+          borderColor: 'rgb(134,255,120)'
+        },
+        {
+          data: [12, 42, 21, 54, 0, 0, 12, 54, 74, 29, 86, 28],
+          label:'Movies',
+          borderColor: 'rgb(255,244,120)'
+        }]
+    },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: 'Monthly Spending'
+        },
+        legend : {
+          position: 'left'
+        }
+      }
+    }
+  })
+</script>
+<script>
+  var cty = document.getElementById('chart2');
+  var nextChart = new Chart(cty, {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        label: 'Dataset1',
+        backgroundColor: 'rgba(255, 200, 50)',
+        pointBackgroundColor: 'rgba(255, 200, 50, 1)',
+        pointRadius: 4,
+        data: [
+          {x: 7, y: 10},
+          {x: 11, y: 25},
+          {x: 15, y: 15},
+          {x: 25, y: 32},
+          {x: 97, y: 26},
+          {x: 28, y: 15},
+          {x: 2, y: 27},
+          {x: 75, y: 84},
+        ]
+      },
+        {
+          label: 'Dataset2',
+          backgroundColor: 'rgb(108,255,50)',
+          pointBackgroundColor: 'rgb(108,255,50)',
+          pointRadius: 4,
+          data: [
+            {x: 34, y: 15},
+            {x: 12, y: 42},
+            {x: 8, y: 35},
+            {x: 82, y: 32},
+            {x: 82, y: 95},
+            {x: 64, y: 2},
+            {x: 8, y: 4},
+            {x: 92, y: 92},
+          ]
+        },
+        {
+          label: 'Dataset3',
+          backgroundColor: 'rgb(255,67,50)',
+          pointBackgroundColor: 'rgb(255,67,50)',
+          pointRadius: 4,
+          data: [
+            {x: 2, y: 14},
+            {x: 9, y: 15},
+            {x: 5, y: 92},
+            {x: 25, y: 65},
+            {x: 64, y: 53},
+            {x: 23, y: 89},
+            {x: 74, y: 79},
+            {x: 54, y: 32},
+            {x: 9, y: 38},
+            {x: 4, y: 46},
+          ]
+        },
+        {
+          label: 'Dataset4',
+          backgroundColor: 'rgb(50,255,248)',
+          pointBackgroundColor: 'rgb(50,255,248)',
+          pointRadius: 4,
+          data: [
+            {x: 35, y: 36},
+            {x: 5, y: 34},
+            {x: 96, y: 23},
+            {x: 3, y: 86},
+            {x: 93, y: 198},
+            {x: 93, y: 34},
+            {x: 10, y: 3},
+            {x: 43, y: 245},
+            {x: 75, y: 34},
+            {x: 7, y: 92},
+          ]
+        }]
+    },
+    options: {
+      scales: {
+        xAxis: {
+          beginAtZero: true
+        },
+        yAxis: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: 'Sales'
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
