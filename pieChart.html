@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pie Chart</title>
+</head>
+<body>
+
+  <canvas id="pieChart"></canvas>
+  <canvas id="pieChart2"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  var ctx = document.getElementById('pieChart');
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Red', 'Yellow', 'Blue'],
+        datasets: [{
+            label: 'My First Doughnut Today',
+            data: [300, 50, 200],
+            backgroundColor: [
+                'rgb(255, 99, 150)',
+                'rgb(255,224,99)',
+                "rgb(99,143,255)",
+            ],
+            hoverOffset: 1
+        }]
+    }
+  })
+</script>
+  <script>
+      var cty = document.getElementById('pieChart2');
+      var myChart2 = new Chart(cty, {
+          type: 'doughnut',
+          data: {
+              labels: ['Red', 'Yellow', 'Blue'],
+              datasets: [{
+                  label: 'My First Doughnut Today',
+                  data: [300, 50, 200],
+                  backgroundColor: [
+                      'rgb(255, 99, 150)',
+                      'rgb(255,224,99)',
+                      "rgb(99,143,255)",
+                  ],
+                  hoverOffset: 1
+              }]
+          }
+      })
+  </script>
+</body>
+</html>
