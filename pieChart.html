@@ -6,8 +6,9 @@
 </head>
 <body>
 
-  <canvas id="pieChart"></canvas>
-  <canvas id="pieChart2"></canvas>
+  <div style="width: 300px"><canvas id="pieChart"></canvas></div>
+  <div style="width: 300px"><canvas id="pieChart2"></canvas></div>
+  <div style="width: 300px"><canvas id="pieChart3"></canvas></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
@@ -15,38 +16,69 @@
   var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Red', 'Yellow', 'Blue'],
+        labels: ['Red', 'Yellow', 'Blue', 'Green', 'Brown', 'Purple'],
         datasets: [{
-            label: 'My First Doughnut Today',
-            data: [300, 50, 200],
+            label: 'Best Color Pencils',
+            data: [300, 50, 200, 102, 98, 129],
             backgroundColor: [
-                'rgb(255, 99, 150)',
-                'rgb(255,224,99)',
-                "rgb(99,143,255)",
+                'rgb(166,36,36)',
+                'rgb(211,170,2)',
+                'rgb(9,37,107)',
+                'rgb(40,93,6)',
+                'rgb(93,42,20)',
+                'rgb(131,31,164)',
             ],
             hoverOffset: 1
         }]
     }
   })
 </script>
-  <script>
+<script>
       var cty = document.getElementById('pieChart2');
       var myChart2 = new Chart(cty, {
-          type: 'doughnut',
+          type: 'pie',
           data: {
-              labels: ['Red', 'Yellow', 'Blue'],
+              labels: ['Red', 'Yellow', 'Blue', 'White', 'Black', 'Green'],
               datasets: [{
-                  label: 'My First Doughnut Today',
-                  data: [300, 50, 200],
+                  label: 'My Favorite Power Ranger',
+                  data: [300, 50, 200, 120, 82, 109],
                   backgroundColor: [
-                      'rgb(255, 99, 150)',
-                      'rgb(255,224,99)',
-                      "rgb(99,143,255)",
+                      'rgb(157,29,29)',
+                      'rgb(176,152,58)',
+                      'rgb(1,53,189)',
+                      'rgb(136,134,134)',
+                      'rgb(0,0,0)',
+                      'rgb(115,255,99)',
                   ],
                   hoverOffset: 1
               }]
           }
       })
   </script>
+<script>
+    var ctz = document.getElementById('pieChart3');
+    var myChart2 = new Chart(ctz, {
+        type: 'polarArea',
+        data: {
+            labels: [
+                'Red', 'Green', 'Yellow', 'Grey', 'Blue', 'Pink', 'Purple', 'Black'
+            ],
+            datasets: [{
+                label: 'Favorite Colors',
+                data: [11, 10, 15, 3, 2, 12, 4, 1],
+                backgroundColor: [
+                    'rgb(168,43,49)',
+                    'rgb(139,255,100)',
+                    'rgb(255,234,100)',
+                    'rgb(98,97,93)',
+                    'rgb(100,131,255)',
+                    'rgb(255,100,147)',
+                    'rgb(108,47,148)',
+                    'rgb(0,0,0)'
+                ]
+            }]
+        }
+    })
+</script>
 </body>
 </html>
