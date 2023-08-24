@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+</head>
+<body>
+<div>
+  <canvas id="myChart1"></canvas>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  var ctx = document.getElementById('myChart1');
+  var myChart1 = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Argentina', 'Bangladesh', 'Botswana', 'Chad', `Democratic People's Republic of Korea`, 'Equatorial Guinea', 'Fiji', 'Germany', 'Honduras', 'India', 'Japan', 'Kenya', 'Kuwait', 'Luxembourg', 'Mexico', 'Montenegro', 'Niger', 'Nigeria', 'Oman', 'Peru', 'Phillippines', 'Qatar', 'Russian Federation', 'Serbia', 'Turkiye', 'United Kingdom of Great Britain and Northern Ireland' ,'United States of American', 'Vietnam', 'Yemen', 'Zimbabwe'],
+      datasets: [{
+        label: 'World Population by country!',
+        data: [45036032, 167420951, 2546402, 16644701, 25867467, 1596049, 920422, 83328988, 10121763, 1396387127, 51985780, 4360444, 630399, 125998302, 629048, 24333639, 208327405, 4543399, 33304756, 112190977, 2760385, 145617329, 7358005, 84135428, 67059474, 335942003, 96648685, 32284046, 15669666,],
+        backgroundColor: [
+            'rgb(255, 100, 2)',
+            'rgb(133,255,2)',
+            'rgb(255,204,2)',
+            'rgb(2,91,255)',
+            'rgb(255,2,69)',
+            'rgb(255, 100, 2)',
+            'rgb(133,255,2)',
+            'rgb(255,204,2)',
+            'rgb(2,91,255)',
+            'rgb(255,2,69)',
+            'rgb(255, 100, 2)',
+            'rgb(133,255,2)',
+            'rgb(255,204,2)',
+            'rgb(2,91,255)',
+            'rgb(255,2,69)',
+            'rgb(255, 100, 2)',
+            'rgb(133,255,2)',
+            'rgb(255,204,2)',
+            'rgb(2,91,255)',
+            'rgb(255,2,69)',
+            'rgb(255, 100, 2)',
+            'rgb(133,255,2)',
+            'rgb(255,204,2)',
+            'rgb(2,91,255)',
+            'rgb(255,2,69)',
+            'rgb(255, 100, 2)',
+            'rgb(133,255,2)',
+            'rgb(255,204,2)',
+            'rgb(2,91,255)',
+            'rgb(255,2,69)',
+        ]
+      }]
+    }
+  })
+</script>
+</body>
+</html>
